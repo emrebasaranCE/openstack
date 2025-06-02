@@ -177,6 +177,7 @@ First we have to look which type of [virtual machine we can use:](https://docs.o
 openstack flavor list
 ```
 ![alt text](images/image-4.png)
+
 And select one, lets select `m1.small` for faster response.
 
 Then check our networks:
@@ -211,7 +212,7 @@ Voila! We created the instance. Lets get into that vm and see if it really works
 
 --- 
 
-We can see servers like this:
+We can see servers with this:
 ```bash
 openstack server list
 ```
@@ -229,6 +230,7 @@ openstack security group rule create --proto tcp --dst-port 22 --ingress [securi
 ```
 
 After running this command, we can see that our security group opened the port 22:
+
 ![alt text](images/image-9.png)
 
 Now lets createa a new floating ip:
@@ -249,6 +251,8 @@ ssh -i ~/.ssh/mykey.pem ubuntu@172.24.4.134
 And yes, with ssh, we are inside the instance!!!
 
 ---
+
+Final Note:
 
 Here is the thing, I tried to login via ssh from my host not inside the openstack but I couldn't. I don't know how. Its because I am using Bridge network on my VirtualBox and I can only connect to the DevStack IP via ssh. Since instance's floating IP inside of DevStack, I cannot use ssh to login from the host. I can login from the DevStack Vm tho. I guess it's not that bad.
 
