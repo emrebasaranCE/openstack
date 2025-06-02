@@ -56,6 +56,11 @@ I will continue with DevStack which makes more sense...
 
 First, we have to create a VM on our Oracle VirtualBox with the image ubuntu 22.04 jammy server(To make it more faster, I won't use os's GUI).
 
+Resources given to the VM (to make it fast!)
+- 25 GB RAM
+- 200 GB Memory
+- 16 Cpu Core(s)
+
 ### 3.2. Installing DevStack inside the Vm
 
 After creating a Vm, we can now move on to the installation phase in [this link.](https://docs.openstack.org/devstack/latest/)
