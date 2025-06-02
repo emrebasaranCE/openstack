@@ -129,9 +129,34 @@ source ~/devstack/openrc admin admin
 
 And uplaod image to the `Glance` service:
 ```bash
-openstack image create "Ubuntu-22.04" \ # image name to show on openstack
-  --file jammy-server-cloudimg-amd64.img \ # file path
-  --disk-format qcow2 \ # 
+openstack image create "ubuntu-22.04" \
+  --file jammy-server-cloudimg-amd64.img \
+  --disk-format qcow2 \
   --container-format bare \
   --public
 ```
+
+```bash
+### NOTE: This is the same command but with commands
+# image name to show on openstack
+openstack image create "ubuntu-22.04" \ 
+  # file path \
+  --file jammy-server-cloudimg-amd64.img \
+#   file format of the disk image \
+  --disk-format qcow2 \ 
+  # even tho i loooked for this, i have no idead what is does... \
+  --container-format bare \
+  # makes available to the all users using Openstack \
+  --public 
+```
+
+If you got this kind of output then its uploaded to our local cloud:
+![alt text](images/image-2.png)
+
+If we look at the dashboard, we can also see that our image has arrived there too:
+![alt text](images/image-3.png)
+Note: The first image is DevStack's default image. It's a tiny Linux distribution (CirrOS) used to test the basic functionality of OpenStack.
+
+### 4.2. Creating a New Instance
+
+Lets create a new instance with our newly uploaded iamge! 
