@@ -1,10 +1,21 @@
+# ☁️ Building a Local Cloud with OpenStack (DevStack Edition)
+
 ## Contents
 
-
+1. [Introduction](#1-introduction)  
+2. [Installing OpenStack](#2-installing-openstack)  
+   2.1 [Can I Install On My Local PC?](#21-can-i-install-on-my-local-pc)  
+   2.2 [I Guess I Can Install!](#22-i-guess-i-can-install)  
+   2.3 [Getting Lots Of Errors...](#23-getting-lots-of-errors)  
+3. [Changing Direction to the DevStack](#3-changing-direction-to-the-devstack)  
+   3.1 [Creating a VM for DevStack](#31-creating-a-vm-for-devstack)  
+   3.2 [Installing DevStack inside the VM](#32-installing-devstack-inside-the-vm)  
+4. [Looking Inside Our Cloud](#4-looking-inside-our-cloud)  
+   4.1 [Uploading Ubuntu Image to Our Cloud](#41-uploading-ubuntu-image-to-our-cloud)  
+   4.2 [Creating a New Instance](#42-creating-a-new-instance) 
 ## 1. Introduction
 
-Hello, in this repository my main aim is to create a system on my local pc that acts as a cloud. In here openstack comes to my help actually. This tool has what you need in order to make what you want!
-
+Hello, in this repository my main aim is to create a system on my local pc that acts as a cloud. In here openstack comes to my help actually. This tool has what you need in order to make what you want! 
 
 ## 2. Installing Openstack
 
@@ -236,3 +247,8 @@ ssh -i ~/.ssh/mykey.pem ubuntu@172.24.4.134
 ```
 
 And yes, with ssh, we are inside the instance!!!
+
+---
+
+Here is the thing, I tried to login via ssh from my host not inside the openstack but I couldn't. I don't know how. Its because I am using Bridge network on my VirtualBox and I can only connect to the DevStack IP via ssh. Since instance's floating IP inside of DevStack, I cannot use ssh to login from the host. I can login from the DevStack Vm tho. I guess it's not that bad.
+
