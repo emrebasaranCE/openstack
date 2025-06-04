@@ -97,6 +97,7 @@ After this step, to control my terminal, I added this configuration:
 ```bash
 nano ~/.inputrc
 "\C-h": backward-kill-word
+bind -f ~/.inputrc
 ```
 This command lets you delete words with ctrl + backspace which is needed while working in a terminal environment!
 
@@ -140,7 +141,8 @@ wget https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.i
 
 To get access for openstack commands, we can use this command:
 ```bash
-source ~/devstack/openrc admin admin
+source /opt/stack/devstack/openrc admin admin
+cd /opt/stack/devstack/
 ```
 
 And uplaod image to the `Glance` service:
