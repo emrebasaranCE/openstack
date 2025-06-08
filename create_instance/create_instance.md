@@ -1,4 +1,4 @@
-### 1. Creating a New Instance
+## 1. Creating a New Instance
 
 Lets create a new instance with our newly uploaded image!
 

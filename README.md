@@ -7,3 +7,5 @@ Hi, in this repository I will try to create multiple exercises on open source cl
 - #### [Downloading and Uploading Image to OpenStack](install_image_and_upload/install_image_and_upload.md) 
 
 - #### [Creating Instance on OpenStack](create_instance/create_instance.md) 
+
+- ### [Installing Orchestration Service(Heat)](install_heat/install_heat.md)
