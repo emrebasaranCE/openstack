@@ -9,3 +9,5 @@ Hi, in this repository I will try to create multiple exercises on open source cl
 - #### [Creating Instance on OpenStack](create_instance/create_instance.md) 
 
 - ### [Installing Orchestration Service(Heat)](install_heat/install_heat.md)
+
+- ### [Connect Jenkins to the Openstack](connect_jenkins/connect_jenkins.md)
